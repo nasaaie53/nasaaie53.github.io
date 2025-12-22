@@ -6,15 +6,16 @@
     <title>E-Portfolio | Nasaaie Noris</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        .baby-blue-bg { background-color: #E0F2FE; } /* Warna Baby Blue */
     </style>
 </head>
-<body class="bg-gray-50 text-gray-900">
+<body class="bg-white text-gray-900">
 
-    <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 py-4">
-        <div class="max-w-5xl mx-auto px-6 flex justify-between items-center">
-            <h1 class="font-bold text-xl tracking-tight text-blue-600">Nasaaie Noris</h1>
-            <div class="space-x-6 text-sm font-medium">
+    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md py-6">
+        <div class="max-w-7xl mx-auto px-10 flex justify-end items-center">
+            <div class="space-x-10 text-xs font-bold uppercase tracking-widest text-gray-500">
                 <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#education" class="hover:text-blue-600 transition">Education</a>
                 <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
@@ -23,119 +24,125 @@
         </div>
     </nav>
 
-    <main class="max-w-5xl mx-auto px-6 py-12">
-
-        <section id="about" class="py-16">
-            <div class="max-w-4xl space-y-6">
-                <h2 class="text-5xl font-black text-gray-900 leading-tight">
-                    University Student @ UTM Skudai, Johor
-                </h2>
-                <p class="text-base text-gray-600 leading-relaxed max-w-2xl">
-                    Hi there, I am an undergraduate student pursuing a degree in <span class="text-blue-600 font-semibold">Computer Science specializing in Data Engineering</span>. 
-                    I am really excited about developing a solid foundation in computer science and programming 
+    <header id="about" class="relative min-h-[90vh] flex flex-col justify-center">
+        <div class="absolute inset-0 w-1/3 h-2/3 baby-blue-bg -z-10 mt-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-10 w-full grid md:grid-cols-2 gap-10">
+            <div class="flex items-center">
+                <h1 class="text-7xl md:text-9xl font-black text-gray-900 tracking-tighter leading-none">
+                    NASAAIE<br>NORIS
+                </h1>
+            </div>
+            
+            <div class="flex flex-col justify-end pb-10 space-y-6">
+                <h3 class="text-3xl font-bold text-gray-800">Hello!</h3>
+                <p class="text-xl text-gray-600 leading-relaxed font-medium">
+                    I am an undergraduate student pursuing a degree in 
+                    <span class="text-blue-600">Computer Science specializing in Data Engineering</span>. 
+                    I am passionate about developing a solid foundation in computer science and programming 
                     and keen to close the knowledge gap between industry experience and academic theory.
                 </p>
             </div>
-        </section>
+        </div>
+    </header>
 
-        <div class="py-12">
-            <hr class="border-gray-200">
+    <main class="max-w-7xl mx-auto px-10">
+
+        <div class="py-20">
+            <hr class="border-gray-100">
         </div>
 
-        <section class="grid md:grid-cols-2 gap-12 py-12">
+        <section class="grid md:grid-cols-2 gap-20 py-20">
             <div>
-                <h3 class="text-2xl font-bold mb-6">Technical Skills</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-gray-200 rounded-full text-sm font-medium">[Skill 1]</span>
-                    <span class="px-3 py-1 bg-gray-200 rounded-full text-sm font-medium">[Skill 2]</span>
-                    <span class="px-3 py-1 bg-gray-200 rounded-full text-sm font-medium">[Skill 3]</span>
-                    <span class="px-3 py-1 bg-gray-200 rounded-full text-sm font-medium">[Skill 4]</span>
-                </div>
-                <h3 class="text-2xl font-bold mt-8 mb-6">Soft Skills</h3>
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Critical Thinking</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Adaptability</span>
-                    <span class="px-3 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-medium">Teamwork</span>
+                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-10">Expertise</h3>
+                <div class="space-y-12">
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4">Technical Skills</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold text-gray-700">[Skill 1]</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold text-gray-700">[Skill 2]</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold text-gray-700">[Skill 3]</span>
+                            <span class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold text-gray-700">[Skill 4]</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-4">Soft Skills</h4>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-bold">Critical Thinking</span>
+                            <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-bold">Adaptability</span>
+                            <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-bold">Teamwork</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-                <h3 class="text-2xl font-bold mb-4 italic">Resume Highlights</h3>
-                <ul class="space-y-3 text-gray-600 text-sm">
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Focus on Computer Science & Data Engineering
+
+            <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100">
+                <h3 class="text-2xl font-bold mb-6 tracking-tight">Resume Highlights</h3>
+                <ul class="space-y-6 text-gray-600 font-medium">
+                    <li class="flex items-start italic">
+                        <span class="text-blue-600 mr-3">→</span>
+                        Focus on Computer Science & Data Engineering at UTM
                     </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Experience with [Key Tool or Software]
+                    <li class="flex items-start italic">
+                        <span class="text-blue-600 mr-3">→</span>
+                        Practical knowledge in [Key Tool or Software]
                     </li>
-                    <li class="flex items-start">
-                        <span class="text-blue-600 mr-2">•</span>
-                        Fluent in English and Bahasa Melayu
+                    <li class="flex items-start italic">
+                        <span class="text-blue-600 mr-3">→</span>
+                        Professional fluency in English and Bahasa Melayu
                     </li>
                 </ul>
             </div>
         </section>
 
-        <section id="education" class="py-16 space-y-8">
-            <h2 class="text-3xl font-bold">Education</h2>
-            <div class="border-l-2 border-blue-600 pl-6 space-y-4">
-                <div>
-                    <h4 class="text-xl font-bold text-gray-900">Universiti Teknologi Malaysia (UTM)</h4>
-                    <p class="text-blue-600 font-medium">Bachelor of Computer Science (Data Engineering) | 20XX – 20XX</p>
-                    <p class="text-gray-500 mt-2 italic text-sm">Relevant Coursework: [Subject 1], [Subject 2], [Subject 3]</p>
+        <section id="education" class="py-24 border-t border-gray-100">
+            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-10">Academic Journey</h3>
+            <div class="max-w-3xl">
+                <h4 class="text-4xl font-black text-gray-900 mb-2">Universiti Teknologi Malaysia</h4>
+                <p class="text-xl text-blue-600 font-bold mb-6">Bachelor of Computer Science (Data Engineering)</p>
+                <div class="p-6 bg-blue-50/50 rounded-2xl border border-blue-100">
+                    <p class="text-gray-500 font-bold mb-2 uppercase text-xs tracking-widest">Key Learning Areas</p>
+                    <p class="text-gray-700 font-medium leading-relaxed">[Subject 1] • [Subject 2] • [Subject 3] • [Subject 4]</p>
                 </div>
             </div>
         </section>
 
-        <section id="experience" class="py-16 space-y-8">
-            <h2 class="text-3xl font-bold">Experience</h2>
-            <div class="bg-white border border-gray-200 rounded-xl p-6">
-                <h4 class="text-lg font-bold">[Role, e.g., Student Representative]</h4>
-                <p class="text-gray-500 text-sm mb-4">[University Department/Society] | [Dates]</p>
-                <ul class="list-disc list-inside text-gray-600 text-sm space-y-2">
-                    <li>Led a team of [X] members to organize [Event Name].</li>
-                    <li>Managed digital communication and documentation for the club.</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="projects" class="py-16 space-y-8">
-            <h2 class="text-3xl font-bold">Key Projects</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="p-6 border border-gray-200 rounded-xl hover:shadow-md transition">
-                    <h4 class="text-xl font-bold mb-2">[Project Title 1]</h4>
-                    <p class="text-gray-600 text-sm mb-4">Description of your data engineering or CS project.</p>
-                    <div class="text-xs font-mono text-blue-600 bg-blue-50 px-2 py-1 inline-block rounded">
-                        Tools: [e.g. Python, SQL]
+        <section id="projects" class="py-24 border-t border-gray-100">
+            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-10">Selected Projects</h3>
+            <div class="grid md:grid-cols-2 gap-10">
+                <div class="group p-8 bg-white border border-gray-100 rounded-3xl hover:border-blue-200 hover:shadow-xl transition-all duration-300">
+                    <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">[Project Title 1]</h4>
+                    <p class="text-gray-500 mb-6 font-medium">Description of your data engineering or CS project focused on problem solving.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Python</span>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">SQL</span>
                     </div>
                 </div>
-                <div class="p-6 border border-gray-200 rounded-xl hover:shadow-md transition">
-                    <h4 class="text-xl font-bold mb-2">[Project Title 2]</h4>
-                    <p class="text-gray-600 text-sm mb-4">Description of another academic or personal project.</p>
-                    <div class="text-xs font-mono text-blue-600 bg-blue-50 px-2 py-1 inline-block rounded">
-                        Tools: [e.g. Tableau, R]
+                <div class="group p-8 bg-white border border-gray-100 rounded-3xl hover:border-blue-200 hover:shadow-xl transition-all duration-300">
+                    <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">[Project Title 2]</h4>
+                    <p class="text-gray-500 mb-6 font-medium">Description of another academic project involving data visualization or engineering.</p>
+                    <div class="flex gap-2">
+                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Tableau</span>
+                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">R</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="my-20 bg-blue-600 rounded-3xl p-10 text-center text-white space-y-6">
-            <h2 class="text-3xl font-bold">Get In Touch</h2>
-            <p class="max-w-md mx-auto opacity-90 italic text-sm">
-                "Currently looking for internship/job opportunities. I would love to hear from you!"
-            </p>
-            <div class="flex flex-col md:flex-row justify-center items-center gap-6 pt-4">
-                <a href="mailto:[YourEmail]" class="font-medium hover:underline">[Your Email Address]</a>
-                <a href="https://linkedin.com/in/[YourProfile]" target="_blank" class="font-medium hover:underline">LinkedIn</a>
-                <a href="https://github.com/[YourUser]" target="_blank" class="font-medium hover:underline">GitHub</a>
+        <section id="contact" class="py-32 bg-gray-900 rounded-[3rem] my-20 text-center text-white px-6">
+            <h2 class="text-5xl md:text-7xl font-black mb-10 tracking-tighter italic">Let's Connect.</h2>
+            <p class="text-xl text-gray-400 mb-12 font-medium">Ready for new challenges and learning opportunities.</p>
+            <div class="flex flex-col md:flex-row justify-center gap-8 text-sm font-black uppercase tracking-[0.3em]">
+                <a href="mailto:[YourEmail]" class="hover:text-blue-400 transition underline underline-offset-8">Email</a>
+                <a href="#" class="hover:text-blue-400 transition underline underline-offset-8 text-gray-500">LinkedIn</a>
+                <a href="#" class="hover:text-blue-400 transition underline underline-offset-8 text-gray-500">GitHub</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="text-center py-10 text-gray-400 text-sm">
-        &copy; 2025 Nasaaie Noris. Built with simplicity in mind.
+    <footer class="text-center py-10 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+        &copy; 2025 Nasaaie Noris — Inspired by Minimal Design
     </footer>
 
 </body>
