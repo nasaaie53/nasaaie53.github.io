@@ -10,5 +10,5 @@ It allows me to present my softskills,experience and project through Github and 
 ### Tools 
 - HTML
 - CSS
-- GitHUb
--Linkedln
+- GitHUb<br>
+- Linkedln
