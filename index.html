@@ -4,51 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-Portfolio | Nasaaie Noris</title>
+    
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:italic:wght@600&display=swap');
-        
-        html {
-            scroll-behavior: smooth;
-            scroll-padding-top: 100px;
-        }
-
-        body { 
-            font-family: 'Inter', sans-serif; 
-        }
-
-        .baby-blue-bg { background-color: #E0F2FE; } 
-        
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: #2563eb;
-            transition: width 0.3s ease;
-        }
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .quote-font {
-            font-family: 'Playfair Display', serif;
-            font-style: italic;
-        }
-    </style>
+    
+    <link rel="stylesheet" href="style.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:italic:wght@600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900">
+<body class="bg-white">
 
     <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md py-6">
         <div class="max-w-7xl mx-auto px-10 flex justify-end items-center">
             <div class="space-x-10 text-xs font-bold uppercase tracking-widest text-gray-500">
                 <a href="#about" class="nav-link hover:text-blue-600 transition">About</a>
+                <a href="#expertise" class="nav-link hover:text-blue-600 transition">Expertise</a>
                 <a href="#education" class="nav-link hover:text-blue-600 transition">Education</a>
                 <a href="#projects" class="nav-link hover:text-blue-600 transition">Projects</a>
                 <a href="#contact" class="nav-link hover:text-blue-600 transition">Contact</a>
@@ -56,32 +25,30 @@
         </div>
     </nav>
 
-    <header class="relative min-h-screen flex flex-col justify-center">
-        <div class="absolute inset-0 w-1/4 h-3/4 baby-blue-bg -z-10 mt-10"></div>
+    <header class="relative min-h-screen flex flex-col justify-center px-10">
+        <div class="absolute inset-0 w-1/4 h-3/4 baby-mint-bg -z-10 mt-10"></div>
         
-        <div class="max-w-7xl mx-auto px-10 w-full">
+        <div class="max-w-7xl mx-auto w-full">
             <div class="max-w-3xl space-y-8">
-                <h1 class="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter leading-none">
-                    NASAAIE<br>NORIS
-                </h1>
+                <h1 class="hero-name">NASAAIE<br>NORIS</h1>
 
-                <p class="quote-font text-xl md:text-3xl text-blue-500/80 border-l-4 border-blue-200 pl-6 py-2 max-w-xl">
+                <p class="quote-font">
                     "Ever tried, ever failed, no matter try again,<br>
                     fail again, fail better"
                 </p>
             </div>
         </div>
         
-        <div class="absolute bottom-10 left-10 animate-bounce text-gray-300 text-xs font-bold uppercase tracking-[0.3em]">
+        <div class="absolute bottom-10 left-10 animate-bounce text-gray-400 text-xs font-bold uppercase tracking-[0.3em]">
             Scroll to explore ↓
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-10">
 
-        <section id="about" class="py-24">
-            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-6">About</h3>
-            <p class="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium max-w-4xl">
+        <section id="about" class="section">
+            <h3 class="section-title">About Me</h3>
+            <p class="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium">
                 I am an undergraduate student pursuing a degree in 
                 <span class="text-blue-600 font-bold">Computer Science specializing in Data Engineering</span>. 
                 I am passionate about developing a solid foundation in computer science and programming 
@@ -89,99 +56,86 @@
             </p>
         </section>
 
-        <div class="py-12">
-            <hr class="border-gray-100">
-        </div>
-
-        <section id="expertise" class="grid md:grid-cols-2 gap-20 py-20">
+        <section id="expertise" class="section grid md:grid-cols-2 gap-10">
             <div>
-                <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-10">Expertise</h3>
-                <div class="space-y-12">
+                <h3 class="section-title">Expertise</h3>
+                <div class="space-y-8">
                     <div>
-                        <h4 class="text-2xl font-bold mb-4">Technical Skills</h4>
+                        <h4 class="text-xl font-bold mb-4">Technical Skills</h4>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold text-gray-700">C++</span>
-                            <span class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold text-gray-700">Canva</span>
-                            <span class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold text-gray-700">Microsoft Word</span>
-                            <span class="px-4 py-2 bg-gray-100 rounded-lg text-sm font-bold text-gray-700">Excel</span>
+                            <span class="skill-badge">C++</span>
+                            <span class="skill-badge">Canva</span>
+                            <span class="skill-badge">Microsoft Word</span>
+                            <span class="skill-badge">Excel</span>
                         </div>
                     </div>
                     <div>
-                        <h4 class="text-2xl font-bold mb-4">Soft Skills</h4>
+                        <h4 class="text-xl font-bold mb-4">Soft Skills</h4>
                         <div class="flex flex-wrap gap-3">
-                            <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-bold">Consistency</span>
-                            <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-bold">Adaptability</span>
-                            <span class="px-4 py-2 bg-blue-50 text-blue-700 rounded-lg text-sm font-bold">Teamwork</span>
+                            <span class="skill-badge highlight">Consistency</span>
+                            <span class="skill-badge highlight">Adaptability</span>
+                            <span class="skill-badge highlight">Teamwork</span>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-gray-50 p-10 rounded-3xl border border-gray-100 self-start">
-                <h3 class="text-2xl font-bold mb-6 tracking-tight">Resume Highlights</h3>
-                <ul class="space-y-6 text-gray-600 font-medium text-sm">
-                    <li class="flex items-start italic">
-                        <span class="text-blue-600 mr-3">→</span>
-                        Focus on Computer Science & Data Engineering at UTM
-                    </li>
-                    <li class="flex items-start italic">
-                        <span class="text-blue-600 mr-3">→</span>
-                        Practical knowledge in Database Management & Analytics
-                    </li>
-                    <li class="flex items-start italic">
-                        <span class="text-blue-600 mr-3">→</span>
-                        Professional fluency in English and Bahasa Melayu
-                    </li>
+            <div class="bg-white/50 p-8 rounded-3xl border border-white self-start">
+                <h3 class="text-xl font-bold mb-6">Resume Highlights</h3>
+                <ul class="space-y-4 text-gray-600 font-medium text-sm">
+                    <li class="flex items-start italic"><span class="text-blue-600 mr-3">→</span> Focus on Computer Science & Data Engineering at UTM</li>
+                    <li class="flex items-start italic"><span class="text-blue-600 mr-3">→</span> Practical knowledge in Database Management & Analytics</li>
+                    <li class="flex items-start italic"><span class="text-blue-600 mr-3">→</span> Professional fluency in English and Bahasa Melayu</li>
                 </ul>
             </div>
         </section>
 
-        <section id="education" class="py-24 border-t border-gray-100">
-            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-10">Academic Journey</h3>
+        <section id="education" class="section">
+            <h3 class="section-title">Academic Journey</h3>
             <div class="max-w-3xl">
-                <h4 class="text-4xl font-black text-gray-900 mb-2">Universiti Teknologi Malaysia</h4>
-                <p class="text-xl text-blue-600 font-bold mb-6">Bachelor of Computer Science (Data Engineering)</p>
-                <div class="p-6 bg-blue-50/50 rounded-2xl border border-blue-100">
+                <h4 class="text-3xl font-black text-gray-900 mb-2">Universiti Teknologi Malaysia</h4>
+                <p class="text-lg text-blue-600 font-bold mb-6">Bachelor of Computer Science (Data Engineering)</p>
+                <div class="p-6 bg-white/40 rounded-2xl border border-white">
                     <p class="text-gray-500 font-bold mb-2 uppercase text-xs tracking-widest">Key Learning Areas</p>
-                    <p class="text-gray-700 font-medium leading-relaxed">Database Systems • Algorithms • Data Structures • Big Data Analytics</p>
+                    <p class="text-gray-700 font-medium">Database Systems • Algorithms • Data Structures • Big Data Analytics</p>
                 </div>
             </div>
         </section>
 
-        <section id="projects" class="py-24 border-t border-gray-100">
-            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-10">Selected Projects</h3>
-            <div class="grid md:grid-cols-2 gap-10">
-                <div class="group p-8 bg-white border border-gray-100 rounded-3xl hover:border-blue-200 hover:shadow-xl transition-all duration-300">
+        <section id="projects" class="section">
+            <h3 class="section-title">Selected Projects</h3>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card group">
                     <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">[Project Title 1]</h4>
-                    <p class="text-gray-500 mb-6 font-medium text-sm">Description of your data engineering project focused on data pipeline or storage solutions.</p>
+                    <p class="text-gray-500 mb-6 text-sm">Data engineering project focused on data pipeline or storage solutions.</p>
                     <div class="flex gap-2">
-                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Python</span>
-                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">SQL</span>
+                        <span class="tag">Python</span>
+                        <span class="tag">SQL</span>
                     </div>
                 </div>
-                <div class="group p-8 bg-white border border-gray-100 rounded-3xl hover:border-blue-200 hover:shadow-xl transition-all duration-300">
+                <div class="project-card group">
                     <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">[Project Title 2]</h4>
-                    <p class="text-gray-500 mb-6 font-medium text-sm">Description of a computer science project involving software development or algorithms.</p>
+                    <p class="text-gray-500 mb-6 text-sm">Computer science project involving software development or algorithms.</p>
                     <div class="flex gap-2">
-                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">Java</span>
-                        <span class="text-[10px] font-black uppercase tracking-widest text-blue-600 bg-blue-50 px-3 py-1 rounded-full">GitHub</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">GitHub</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="contact" class="py-32 bg-gray-900 rounded-[3rem] my-20 text-center text-white px-6">
+        <section id="contact" class="contact-section">
             <h2 class="text-5xl md:text-7xl font-black mb-10 tracking-tighter italic">Let's Connect.</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-8 text-sm font-black tracking-[0.3em]">
-                <a href="mailto:nasaaie1005@gmail.com" class="hover:text-blue-400 transition">Email: nasaaie1005@gmail.com</a>
-                <a href="https://www.linkedin.com/in/nasaaie-noris-028bb1389" target="_blank" class="hover:text-blue-400 transition">LinkedIn: Nasaaie Noris</a>
-                <a href="https://github.com/nasaaie53" target="_blank" class="hover:text-blue-400 transition">GitHub: Nasaaie53</a>
+            <div class="flex flex-col md:flex-row justify-center gap-8 text-sm font-black tracking-[0.2em]">
+                <a href="mailto:nasaaie1005@gmail.com" class="hover:text-mint-fresh transition">Email</a>
+                <a href="https://www.linkedin.com/in/nasaaie-noris-028bb1389" target="_blank" class="hover:text-mint-fresh transition">LinkedIn</a>
+                <a href="https://github.com/nasaaie53" target="_blank" class="hover:text-mint-fresh transition">GitHub</a>
             </div>
         </section>
 
     </main>
 
-    <footer class="text-center py-10 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
+    <footer>
         &copy; 2025 Nasaaie Noris — Professional E-Portfolio
     </footer>
 
