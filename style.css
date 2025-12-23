@@ -1,0 +1,163 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* Palet warna berdasarkan gambar Mint Green anda */
+    --mint-primary: #D1F2EB;     /* Warna Mint lembut utama */
+    --mint-dark: #A9DFBF;        /* Warna Mint lebih gelap untuk aksen */
+    --mint-glow: #E8F8F5;        /* Warna Mint sangat cair */
+    --white: #ffffff;
+    --dark-slate: #2C3E50;       /* Warna teks utama (kontras tinggi) */
+    --medium-gray: #BDC3C7;
+    --text-muted: #566573;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: var(--dark-slate);
+    background-color: var(--white); /* Latar belakang bersih */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-x: hidden;
+}
+
+/* Header & Navigation */
+header {
+    padding: 60px 0 30px;
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: var(--dark-slate);
+    line-height: 1;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--mint-dark);
+    margin-top: 15px;
+    letter-spacing: 1px;
+}
+
+/* Container & Sections */
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.section {
+    padding: 40px;
+    border-radius: 20px;
+    background-color: var(--mint-glow); /* Kotak warna mint cair */
+    border: 1px solid var(--mint-primary);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    animation: slideUp 0.8s ease-out both;
+}
+
+.section:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(169, 223, 191, 0.2);
+    background-color: var(--white);
+}
+
+.section-title {
+    font-size: 1.4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--dark-slate);
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-title::after {
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: var(--mint-dark);
+    border-radius: 10px;
+}
+
+/* Profile Section */
+.profile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.avatar-frame {
+    width: 150px;
+    height: 150px;
+    border-radius: 40px; /* Squircle style */
+    background: var(--mint-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transform: rotate(-5deg);
+    transition: 0.3s;
+}
+
+.section:hover .avatar-frame {
+    transform: rotate(0deg);
+    background: var(--mint-dark);
+}
+
+/* Skills/Pills Style */
+.skill-badge {
+    display: inline-block;
+    padding: 8px 18px;
+    margin: 5px;
+    background-color: var(--white);
+    border: 2px solid var(--mint-primary);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+
+.project-card {
+    background: var(--white);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    border-left: 6px solid var(--mint-dark);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.5rem; }
+    .section { padding: 25px; }
+}
