@@ -7,159 +7,124 @@
 }
 
 :root {
-    /* Palet warna berdasarkan gambar Mint Green anda */
-    --mint-primary: #D1F2EB;     /* Warna Mint lembut utama */
-    --mint-dark: #A9DFBF;        /* Warna Mint lebih gelap untuk aksen */
-    --mint-glow: #E8F8F5;        /* Warna Mint sangat cair */
+    /* Kod warna daripada gambar anda */
+    --mint-light: #D1F2EB;     /* Warna gambar pertama */
+    --mint-fresh: #98FFD9;     /* Warna gambar kedua */
+    --mint-dark: #76D7C4;      /* Untuk kontraks teks/border */
+    --dark-text: #2D3436;      /* Warna teks utama */
     --white: #ffffff;
-    --dark-slate: #2C3E50;       /* Warna teks utama (kontras tinggi) */
-    --medium-gray: #BDC3C7;
-    --text-muted: #566573;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
 }
 
 body {
     font-family: 'Inter', sans-serif;
-    line-height: 1.7;
-    color: var(--dark-slate);
-    background-color: var(--white); /* Latar belakang bersih */
+    line-height: 1.8;
+    color: var(--dark-text);
+    background-color: var(--white);
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-    overflow-x: hidden;
 }
 
-/* Header & Navigation */
+/* Header & Hero Section */
 header {
-    padding: 60px 0 30px;
-    text-align: center;
-    animation: fadeIn 1s ease-out;
-}
-
-.hero-title {
-    font-size: 3.5rem;
-    font-weight: 900;
-    letter-spacing: -2px;
-    color: var(--dark-slate);
-    line-height: 1;
-}
-
-.tagline {
-    font-size: 1.2rem;
-    font-weight: 500;
-    color: var(--mint-dark);
-    margin-top: 15px;
-    letter-spacing: 1px;
-}
-
-/* Container & Sections */
-.container {
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 40px;
-    margin-top: 40px;
+    justify-content: center;
+    padding: 40px 0;
 }
 
+h1 {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    color: var(--dark-text);
+}
+
+.quote-font {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--mint-dark);
+    border-left: 5px solid var(--mint-fresh);
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+/* Sections Styling */
 .section {
-    padding: 40px;
-    border-radius: 20px;
-    background-color: var(--mint-glow); /* Kotak warna mint cair */
-    border: 1px solid var(--mint-primary);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    animation: slideUp 0.8s ease-out both;
+    padding: 60px 40px;
+    margin-bottom: 40px;
+    border-radius: 24px;
+    background-color: var(--mint-light); /* Menggunakan warna mint anda */
+    border: 1px solid var(--mint-fresh);
+    transition: all 0.4s ease;
 }
 
 .section:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 30px rgba(169, 223, 191, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(152, 255, 217, 0.2);
     background-color: var(--white);
 }
 
 .section-title {
-    font-size: 1.4rem;
-    font-weight: 800;
+    font-size: 0.8rem;
+    font-weight: 900;
     text-transform: uppercase;
-    color: var(--dark-slate);
-    margin-bottom: 25px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
+    letter-spacing: 0.2em;
+    color: #2563eb; /* Warna biru mengikut coding asal anda */
+    margin-bottom: 20px;
 }
 
-.section-title::after {
-    content: "";
-    height: 3px;
-    width: 50px;
-    background-color: var(--mint-dark);
-    border-radius: 10px;
-}
-
-/* Profile Section */
-.profile-card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.avatar-frame {
+/* Profile Image Placeholder */
+.profile-img-placeholder {
     width: 150px;
     height: 150px;
-    border-radius: 40px; /* Squircle style */
-    background: var(--mint-primary);
+    background: linear-gradient(135deg, var(--mint-fresh), var(--mint-dark));
+    border-radius: 50%;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease;
+}
+
+/* Contact Icons */
+.contact-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--white);
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
-    transform: rotate(-5deg);
-    transition: 0.3s;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: transform 0.2s ease;
 }
 
-.section:hover .avatar-frame {
-    transform: rotate(0deg);
-    background: var(--mint-dark);
-}
-
-/* Skills/Pills Style */
-.skill-badge {
-    display: inline-block;
-    padding: 8px 18px;
-    margin: 5px;
-    background-color: var(--white);
-    border: 2px solid var(--mint-primary);
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-muted);
-}
-
-/* Projects List */
-.project-card {
-    background: var(--white);
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    border-left: 6px solid var(--mint-dark);
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 0;
+    color: #999;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
-    .hero-title { font-size: 2.5rem; }
-    .section { padding: 25px; }
+    h1 { font-size: 3.5rem; }
+    .section { padding: 30px 20px; }
 }
