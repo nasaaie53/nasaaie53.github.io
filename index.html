@@ -37,7 +37,6 @@
             width: 100%;
         }
 
-        /* Gaya khas untuk Quote of the Day */
         .quote-font {
             font-family: 'Playfair Display', serif;
             font-style: italic;
@@ -57,33 +56,38 @@
         </div>
     </nav>
 
-    <header id="about" class="relative min-h-screen flex flex-col justify-center">
+    <header class="relative min-h-screen flex flex-col justify-center">
         <div class="absolute inset-0 w-1/4 h-3/4 baby-blue-bg -z-10 mt-10"></div>
         
         <div class="max-w-7xl mx-auto px-10 w-full">
-            <div class="max-w-3xl space-y-6">
+            <div class="max-w-3xl space-y-8">
                 <h1 class="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter leading-none">
                     NASAAIE<br>NORIS
                 </h1>
 
-                <p class="quote-font text-xl md:text-2xl text-blue-500/80 border-l-4 border-blue-200 pl-4 py-1">
-                    "Ever tried, ever failed, no matter try again, fail again, fail better"
+                <p class="quote-font text-xl md:text-3xl text-blue-500/80 border-l-4 border-blue-200 pl-6 py-2 max-w-xl">
+                    "Ever tried, ever failed, no matter try again,<br>
+                    fail again, fail better"
                 </p>
-                
-                <div class="pt-12">
-                    <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-4">About</h3>
-                    <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-medium max-w-2xl">
-                        I am an undergraduate student pursuing a degree in 
-                        <span class="text-blue-600 font-bold">Computer Science specializing in Data Engineering</span>. 
-                        I am passionate about developing a solid foundation in computer science and programming 
-                        and keen to close the knowledge gap between industry experience and academic theory.
-                    </p>
-                </div>
             </div>
+        </div>
+        
+        <div class="absolute bottom-10 left-10 animate-bounce text-gray-300 text-xs font-bold uppercase tracking-[0.3em]">
+            Scroll to explore ↓
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-10">
+
+        <section id="about" class="py-24">
+            <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-6">About</h3>
+            <p class="text-lg md:text-2xl text-gray-600 leading-relaxed font-medium max-w-4xl">
+                I am an undergraduate student pursuing a degree in 
+                <span class="text-blue-600 font-bold">Computer Science specializing in Data Engineering</span>. 
+                I am passionate about developing a solid foundation in computer science and programming 
+                and keen to close the knowledge gap between industry experience and academic theory.
+            </p>
+        </section>
 
         <div class="py-12">
             <hr class="border-gray-100">
