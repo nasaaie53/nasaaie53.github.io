@@ -6,14 +6,10 @@
     <title>E-Portfolio | Nasaaie Noris</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
-    
     <link rel="stylesheet" href="style.css">
-    
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:italic:wght@600&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white">
-
-    <nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md py-6">
+<body class="bg-[#E0F2FE]"> <nav class="fixed top-0 w-full z-50 bg-white/50 backdrop-blur-md py-6">
         <div class="max-w-7xl mx-auto px-10 flex justify-end items-center">
             <div class="space-x-10 text-xs font-bold uppercase tracking-widest text-gray-500">
                 <a href="#about" class="nav-link hover:text-blue-600 transition">About</a>
@@ -29,10 +25,12 @@
         <div class="absolute inset-0 w-1/4 h-3/4 baby-mint-bg -z-10 mt-10"></div>
         
         <div class="max-w-7xl mx-auto w-full">
-            <div class="max-w-3xl space-y-8">
-                <h1 class="hero-name">NASAAIE<br>NORIS</h1>
+            <div class="max-w-4xl space-y-8">
+                <h1 class="hero-name text-7xl md:text-[9rem] leading-[0.85]">
+                    NASAAIE<br>NORIS
+                </h1>
 
-                <p class="quote-font">
+                <p class="quote-font text-2xl md:text-3xl">
                     "Ever tried, ever failed, no matter try again,<br>
                     fail again, fail better"
                 </p>
@@ -124,18 +122,19 @@
             </div>
         </section>
 
-        <section id="contact" class="contact-section">
-            <h2 class="text-5xl md:text-7xl font-black mb-10 tracking-tighter italic">Let's Connect.</h2>
-            <div class="flex flex-col md:flex-row justify-center gap-8 text-sm font-black tracking-[0.2em]">
-                <a href="mailto:nasaaie1005@gmail.com" class="hover:text-mint-fresh transition">Email</a>
-                <a href="https://www.linkedin.com/in/nasaaie-noris-028bb1389" target="_blank" class="hover:text-mint-fresh transition">LinkedIn</a>
-                <a href="https://github.com/nasaaie53" target="_blank" class="hover:text-mint-fresh transition">GitHub</a>
+        <section id="contact" class="section text-center">
+            <h3 class="section-title">Contact Me</h3>
+            <h2 class="text-5xl md:text-7xl font-black mb-10 tracking-tighter italic text-gray-900">Let's Connect.</h2>
+            <div class="flex flex-col md:flex-row justify-center gap-8 text-sm font-black tracking-[0.2em] text-blue-600">
+                <a href="mailto:nasaaie1005@gmail.com" class="hover:text-gray-900 transition underline">Email</a>
+                <a href="https://www.linkedin.com/in/nasaaie-noris-028bb1389" target="_blank" class="hover:text-gray-900 transition underline">LinkedIn</a>
+                <a href="https://github.com/nasaaie53" target="_blank" class="hover:text-gray-900 transition underline">GitHub</a>
             </div>
         </section>
 
     </main>
 
-    <footer>
+    <footer class="text-center py-10 text-gray-400 text-[10px] font-bold uppercase tracking-widest">
         &copy; 2025 Nasaaie Noris — Professional E-Portfolio
     </footer>
 
