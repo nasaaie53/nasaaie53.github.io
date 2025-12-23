@@ -6,12 +6,10 @@
     <title>E-Portfolio | Nasaaie Noris</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&family=Playfair+Display:italic:wght@600&display=swap');
         
-        /* Motion scroll yang lembut */
         html {
             scroll-behavior: smooth;
-            /* Memberi ruang di atas supaya tajuk tidak tertutup oleh navbar */
             scroll-padding-top: 100px;
         }
 
@@ -19,9 +17,8 @@
             font-family: 'Inter', sans-serif; 
         }
 
-        .baby-blue-bg { background-color: #E0F2FE; } /* Warna Baby Blue */
+        .baby-blue-bg { background-color: #E0F2FE; } 
         
-        /* Efek hover pada link navigasi */
         .nav-link {
             position: relative;
             transition: color 0.3s ease;
@@ -39,6 +36,12 @@
         .nav-link:hover::after {
             width: 100%;
         }
+
+        /* Gaya khas untuk Quote of the Day */
+        .quote-font {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+        }
     </style>
 </head>
 <body class="bg-white text-gray-900">
@@ -54,28 +57,35 @@
         </div>
     </nav>
 
-    <header id="about" class="relative min-h-[90vh] flex flex-col justify-center">
+    <header id="about" class="relative min-h-screen flex flex-col justify-center">
         <div class="absolute inset-0 w-1/4 h-3/4 baby-blue-bg -z-10 mt-10"></div>
         
         <div class="max-w-7xl mx-auto px-10 w-full">
-            <div class="max-w-3xl space-y-8">
-                <h1 class="text-6xl md:text-8xl font-black text-gray-900 tracking-tighter leading-none">
+            <div class="max-w-3xl space-y-6">
+                <h1 class="text-5xl md:text-7xl font-black text-gray-900 tracking-tighter leading-none">
                     NASAAIE<br>NORIS
                 </h1>
-                
-                <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-medium max-w-2xl">
-                    I am an undergraduate student pursuing a degree in 
-                    <span class="text-blue-600 font-bold">Computer Science specializing in Data Engineering</span>. 
-                    I am passionate about developing a solid foundation in computer science and programming 
-                    and keen to close the knowledge gap between industry experience and academic theory.
+
+                <p class="quote-font text-xl md:text-2xl text-blue-500/80 border-l-4 border-blue-200 pl-4 py-1">
+                    "Ever tried, ever failed, no matter try again, fail again, fail better"
                 </p>
+                
+                <div class="pt-12">
+                    <h3 class="text-xs font-black uppercase tracking-[0.2em] text-blue-600 mb-4">About</h3>
+                    <p class="text-lg md:text-xl text-gray-600 leading-relaxed font-medium max-w-2xl">
+                        I am an undergraduate student pursuing a degree in 
+                        <span class="text-blue-600 font-bold">Computer Science specializing in Data Engineering</span>. 
+                        I am passionate about developing a solid foundation in computer science and programming 
+                        and keen to close the knowledge gap between industry experience and academic theory.
+                    </p>
+                </div>
             </div>
         </div>
     </header>
 
     <main class="max-w-7xl mx-auto px-10">
 
-        <div class="py-24">
+        <div class="py-12">
             <hr class="border-gray-100">
         </div>
 
@@ -160,7 +170,7 @@
             <h2 class="text-5xl md:text-7xl font-black mb-10 tracking-tighter italic">Let's Connect.</h2>
             <div class="flex flex-col md:flex-row justify-center gap-8 text-sm font-black tracking-[0.3em]">
                 <a href="mailto:nasaaie1005@gmail.com" class="hover:text-blue-400 transition">Email: nasaaie1005@gmail.com</a>
-                <a href="https://www.linkedin.com/in/nasaaie-noris-028bb1389?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="hover:text-blue-400 transition">LinkedIn: Nasaaie Noris</a>
+                <a href="https://www.linkedin.com/in/nasaaie-noris-028bb1389" target="_blank" class="hover:text-blue-400 transition">LinkedIn: Nasaaie Noris</a>
                 <a href="https://github.com/nasaaie53" target="_blank" class="hover:text-blue-400 transition">GitHub: Nasaaie53</a>
             </div>
         </section>
