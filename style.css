@@ -1,70 +1,150 @@
 /* style.css */
 
-:root {
-    /* Warna Latar Belakang Baby Blue */
-    --baby-blue: #E0F2FE; 
-    
-    /* Warna Kotak Mint Green (Kekal) */
-    --mint-light: #D1F2EB;     
-    --mint-fresh: #98FFD9;     
-    --mint-dark: #76D7C4;      
-    
-    --dark-text: #2D3436;      
-    --blue-accent: #2563eb;
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+:root {
+    --mint-light: #D1F2EB;     /* Warna gambar pertama anda */
+    --mint-fresh: #98FFD9;     /* Warna gambar kedua anda */
+    --mint-dark: #76D7C4;      
+    --dark-text: #2D3436;      
+    --white: #ffffff;
+    --blue-accent: #2563eb;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--baby-blue); /* Penukaran di sini */
-    color: var(--dark-text);
     line-height: 1.8;
+    color: var(--dark-text);
+    background-color: var(--white);
 }
 
-/* Navigasi dibuat lutsinar (transparent) */
-nav {
-    background-color: rgba(255, 255, 255, 0.5) !important;
-    backdrop-filter: blur(10px);
+/* Navigasi */
+.nav-link {
+    position: relative;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 2px;
+    bottom: -4px; left: 0;
+    background-color: var(--blue-accent);
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+/* Hero */
+.hero-name {
+    font-size: 5rem;
+    font-weight: 900;
+    line-height: 0.9;
+    letter-spacing: -3px;
+    text-transform: uppercase;
+    color: var(--dark-text);
 }
 
-/* Kotak seksyen kekal Mint Green */
+.baby-mint-bg { background-color: var(--mint-light); opacity: 0.6; }
+
+.quote-font {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.5rem;
+    color: var(--blue-accent);
+    border-left: 5px solid var(--mint-fresh);
+    padding-left: 20px;
+}
+
+/* Sections */
 .section {
-    max-width: 1100px;
-    margin: 40px auto;
-    padding: 60px 40px;
+    padding: 80px 40px;
+    margin-bottom: 50px;
     border-radius: 40px;
-    background-color: var(--mint-light); 
+    background-color: var(--mint-light);
     border: 1px solid var(--mint-fresh);
     transition: all 0.4s ease;
 }
 
 .section:hover {
     transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 40px rgba(118, 215, 196, 0.15);
 }
 
-/* Quote style */
-.quote-font {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
+.section-title {
+    font-size: 0.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
     color: var(--blue-accent);
-    border-left: 5px solid var(--mint-fresh);
-    padding-left: 20px;
-    font-size: 1.8rem;
+    margin-bottom: 30px;
 }
 
-/* Badge/Kemahiran */
+/* Badges & Tags */
 .skill-badge {
-    display: inline-block;
-    padding: 8px 16px;
-    background: white;
-    border-radius: 10px;
-    margin: 5px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    padding: 10px 20px;
+    background: var(--white);
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--dark-text);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+}
+
+.skill-badge.highlight {
+    background: var(--mint-fresh);
+    color: var(--dark-text);
+}
+
+.project-card {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 24px;
+    transition: 0.3s;
+}
+
+.tag {
+    font-size: 10px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--blue-accent);
+    background: var(--mint-light);
+    padding: 4px 12px;
+    border-radius: 100px;
+}
+
+/* Contact */
+.contact-section {
+    padding: 100px 40px;
+    background: var(--dark-text);
+    border-radius: 3rem;
+    margin: 50px 0;
+    text-align: center;
+    color: var(--white);
+}
+
+.hover\:text-mint-fresh:hover {
+    color: var(--mint-fresh);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 50px 0;
+    color: #BDC3C7;
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+    .hero-name { font-size: 3.5rem; }
+    .section { padding: 40px 20px; }
 }
