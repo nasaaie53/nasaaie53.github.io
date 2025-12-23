@@ -42,13 +42,20 @@ body {
 .nav-link:hover::after { width: 100%; }
 
 /* Hero */
+/* Cari bahagian Hero di style.css dan gantikan dengan ini */
 .hero-name {
-    font-size: 5rem;
+    font-size: 4rem; /* Asal 5rem, sekarang lebih kecil */
     font-weight: 900;
     line-height: 0.9;
     letter-spacing: -3px;
     text-transform: uppercase;
     color: var(--dark-text);
+}
+
+@media (max-width: 768px) {
+    .hero-name { font-size: 3rem; } /* Saiz mobile juga dikecilkan sedikit */
+    .section { padding: 40px 20px; }
+
 }
 
 .baby-mint-bg { background-color: var(--mint-light); opacity: 0.6; }
