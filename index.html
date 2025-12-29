@@ -14,9 +14,9 @@
         <div class="max-w-7xl mx-auto px-10 flex justify-end items-center">
             <div class="space-x-10 text-xs font-bold uppercase tracking-widest text-gray-500">
                 <a href="#about" class="nav-link hover:text-blue-600 transition">About</a>
-                <a href="#expertise" class="nav-link hover:text-blue-600 transition">Expertise</a>
                 <a href="#education" class="nav-link hover:text-blue-600 transition">Education</a>
-                <a href="#assignments" class="nav-link hover:text-blue-600 transition">Assignment</a>
+                <a href="#expertise" class="nav-link hover:text-blue-600 transition">Expertise</a>
+                <a href="#courses" class="nav-link hover:text-blue-600 transition">Courses</a>
                 <a href="#projects" class="nav-link hover:text-blue-600 transition">Projects</a>
                 <a href="#contact" class="nav-link hover:text-blue-600 transition">Contact</a>
             </div>
@@ -27,15 +27,16 @@
         <div class="absolute inset-0 w-1/4 h-3/4 baby-mint-bg -z-10 mt-10"></div>
         
         <div class="max-w-7xl mx-auto w-full">
-            <div class="max-w-4xl space-y-8">
-                <h1 class="hero-name text-6xl md:text-[7rem] leading-[0.85]">
-                    NASAAIE<br>NORIS
-                </h1>
+            <div class="flex items-center gap-10">
+                <div class="w-48 h-48 md:w-64 md:h-64 bg-gray-300 rounded-2xl overflow-hidden flex-shrink-0 border-4 border-white shadow-xl">
+                    <img src="path-gambar-anda.jpg" alt="Nasaaie Noris" class="w-full h-full object-cover">
+                </div>
 
-                <p class="quote-font text-2xl md:text-3xl">
-                    "Ever tried, ever failed, no matter try again,<br>
-                    fail again, fail better"
-                </p>
+                <div class="max-w-4xl">
+                    <h1 class="hero-name text-5xl md:text-[6rem] leading-[0.85] ml-4">
+                        NASAAIE<br>NORIS
+                    </h1>
+                </div>
             </div>
         </div>
         
@@ -54,6 +55,18 @@
                 I am passionate about developing a solid foundation in computer science and programming <br>
                 and keen to close the knowledge gap between industry experience and academic theory.
             </p>
+        </section>
+
+        <section id="education" class="section">
+            <h3 class="section-title">Academic Journey</h3>
+            <div class="max-w-3xl">
+                <h4 class="text-3xl font-black text-gray-900 mb-2">Universiti Teknologi Malaysia</h4>
+                <p class="text-lg text-blue-600 font-bold mb-6">Bachelor of Computer Science (Data Engineering)</p>
+                <div class="p-6 bg-white/40 rounded-2xl border border-white">
+                    <p class="text-gray-500 font-bold mb-2 uppercase text-xs tracking-widest">Key Learning Areas</p>
+                    <p class="text-gray-700 font-medium">Database Systems • Algorithms • Data Structures • Big Data Analytics</p>
+                </div>
+            </div>
         </section>
 
         <section id="expertise" class="section grid md:grid-cols-2 gap-10">
@@ -90,21 +103,43 @@
             </div>
         </section>
 
-        <section id="education" class="section">
-            <h3 class="section-title">Academic Journey</h3>
-            <div class="max-w-3xl">
-                <h4 class="text-3xl font-black text-gray-900 mb-2">Universiti Teknologi Malaysia</h4>
-                <p class="text-lg text-blue-600 font-bold mb-6">Bachelor of Computer Science (Data Engineering)</p>
-                <div class="p-6 bg-white/40 rounded-2xl border border-white">
-                    <p class="text-gray-500 font-bold mb-2 uppercase text-xs tracking-widest">Key Learning Areas</p>
-                    <p class="text-gray-700 font-medium">Database Systems • Algorithms • Data Structures • Big Data Analytics</p>
+        <section id="courses" class="section">
+            <h3 class="section-title !border-emerald-500 after:bg-emerald-500">Courses</h3>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
+                    <h4 class="font-bold">Course File 1</h4>
+                    <p class="text-xs text-gray-500 mt-2">Description of your first course module.</p>
+                </div>
+                <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
+                    <h4 class="font-bold">Course File 2</h4>
+                    <p class="text-xs text-gray-500 mt-2">Description of your second course module.</p>
+                </div>
+                <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
+                    <h4 class="font-bold">Course File 3</h4>
+                    <p class="text-xs text-gray-500 mt-2">Description of your third course module.</p>
+                </div>
+                <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
+                    <h4 class="font-bold">Course File 4</h4>
+                    <p class="text-xs text-gray-500 mt-2">Description of your fourth course module.</p>
+                </div>
+                <div class="p-6 bg-emerald-50 border border-emerald-100 rounded-2xl">
+                    <h4 class="font-bold">Course File 5</h4>
+                    <p class="text-xs text-gray-500 mt-2">Description of your fifth course module.</p>
                 </div>
             </div>
         </section>
 
-        <section id="assignments" class="section">
-            <h3 class="section-title">Assignments</h3>
+        <section id="projects" class="section">
+            <h3 class="section-title">Projects</h3>
             <div class="grid md:grid-cols-2 gap-8">
+                <div class="project-card group">
+                    <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">Project 1 : Design Thinking</h4>
+                    <p class="text-gray-500 mb-6 text-sm">This project focuses on developing solutions to real-world problems.</p>
+                    <div class="flex">
+                        <a href="https://github.com/users/farhanaidil2026-ui/projects/1" target="_blank" class="tag hover:bg-blue-600 hover:text-white transition-colors duration-300">View Task</a>
+                    </div>
+                </div>
+
                 <div class="project-card group">
                     <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">Assignment 1 : UTM Digital Open Day</h4>
                     <p class="text-gray-500 mb-6 text-sm">Tugasan pertama mengenai pendedahan kepada teknologi digital di UTM.</p>
@@ -121,26 +156,11 @@
                     </div>
                 </div>
 
-                <div class="project-card group md:col-span-2 md:w-1/2 md:mx-auto">
+                <div class="project-card group">
                     <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">Assignment 3 : Serunai Industry Talk</h4>
                     <p class="text-gray-500 mb-6 text-sm">Kajian dan ringkasan mengenai ekosistem digital dalam industri daripada Serunai.</p>
                     <div class="flex">
                         <a href="https://github.com/nasaaie53/SECP1513-Technology-Information-System/blob/main/Assignment%203%20:%20Serunai%20Industry%20Talk.md" target="_blank" class="tag hover:bg-blue-600 hover:text-white transition-colors duration-300">View Task</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="section">
-            <h3 class="section-title">Projects</h3>
-            <div class="flex justify-center">
-                <div class="project-card group w-full md:w-1/2">
-                    <h4 class="text-2xl font-bold mb-4 group-hover:text-blue-600 transition">Project 1 : Design Thinking</h4>
-                    <p class="text-gray-500 mb-6 text-sm">This project focuses on developing solutions to real-world problems.</p>
-                    <div class="flex">
-                        <a href="https://github.com/users/farhanaidil2026-ui/projects/1" target="_blank" class="tag hover:bg-blue-600 hover:text-white transition-colors duration-300">
-                            View Task
-                        </a>
                     </div>
                 </div>
             </div>
