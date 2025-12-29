@@ -32,9 +32,10 @@
 </head>
 <body class="bg-[#E0F2FE] overflow-x-hidden"> 
 
-    <nav class="fixed top-0 w-full z-50 bg-white/50 backdrop-blur-md py-6 border-b border-blue-100">
+   <nav class="fixed top-0 w-full z-50 bg-white/50 backdrop-blur-md py-6 border-b border-blue-100">
         <div class="max-w-7xl mx-auto px-10 flex justify-end items-center">
-            <div class="space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-500">
+            <div class="space-x-8 text-[10px] font-bold uppercase tracking-widest text-gray-500" style="scroll-behavior: smooth;">
+                <a href="#" class="hover:text-blue-600 transition">Home</a>
                 <a href="#about" class="hover:text-blue-600 transition">About</a>
                 <a href="#education" class="hover:text-blue-600 transition">Education</a>
                 <a href="#expertise" class="hover:text-blue-600 transition">Expertise</a>
@@ -44,6 +45,12 @@
             </div>
         </div>
     </nav>
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 
     <header class="relative min-h-screen flex flex-col justify-center px-10">
         <div class="max-w-7xl mx-auto w-full">
